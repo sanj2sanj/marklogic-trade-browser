@@ -1,8 +1,7 @@
 package org.sanjeevenutan.marklogic.tradebrowser.repository;
 
-import org.sanjeevenutan.marklogic.tradebrowser.domain.User;
-
 import org.joda.time.DateTime;
+import org.sanjeevenutan.marklogic.tradebrowser.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

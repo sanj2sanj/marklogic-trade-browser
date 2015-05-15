@@ -1,15 +1,17 @@
 package org.sanjeevenutan.marklogic.tradebrowser.web.rest;
 
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import static org.hamcrest.Matchers.hasItem;
+
+import org.mockito.MockitoAnnotations;
 import org.sanjeevenutan.marklogic.tradebrowser.Application;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.Trade;
 import org.sanjeevenutan.marklogic.tradebrowser.repository.TradeRepository;
 import org.sanjeevenutan.marklogic.tradebrowser.repository.search.TradeSearchRepository;
-
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import static org.hamcrest.Matchers.hasItem;
-import org.mockito.MockitoAnnotations;
+import org.sanjeevenutan.marklogic.tradebrowser.web.rest.TradeResource;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.http.MediaType;
@@ -22,7 +24,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+
 import org.joda.time.LocalDate;
+
 import java.math.BigDecimal;
 import java.util.List;
 

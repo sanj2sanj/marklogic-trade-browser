@@ -1,10 +1,11 @@
 package org.sanjeevenutan.marklogic.tradebrowser.web.rest;
 
-import org.sanjeevenutan.marklogic.tradebrowser.Application;
-import org.sanjeevenutan.marklogic.tradebrowser.repository.UserRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.sanjeevenutan.marklogic.tradebrowser.Application;
+import org.sanjeevenutan.marklogic.tradebrowser.repository.UserRepository;
+import org.sanjeevenutan.marklogic.tradebrowser.web.rest.UserResource;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.http.MediaType;

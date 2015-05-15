@@ -27,7 +27,7 @@
     </appender>
 -->
 
-    <logger name="org.sanjeevenutan.marklogic.tradebrowser" level="${logback.loglevel}"/>
+    <logger name="org.sn.marklogic.tradebrowser" level="${logback.loglevel}"/>
 
     <logger name="javax.activation" level="WARN"/>
     <logger name="javax.mail" level="WARN"/>

@@ -1,8 +1,8 @@
 package org.sanjeevenutan.marklogic.tradebrowser.repository;
 
+import org.joda.time.LocalDate;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.PersistentToken;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.User;
-import org.joda.time.LocalDate;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

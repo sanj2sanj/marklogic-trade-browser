@@ -1,7 +1,7 @@
 package org.sanjeevenutan.marklogic.tradebrowser.repository;
 
-import org.sanjeevenutan.marklogic.tradebrowser.domain.PersistentAuditEvent;
 import org.joda.time.LocalDateTime;
+import org.sanjeevenutan.marklogic.tradebrowser.domain.PersistentAuditEvent;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

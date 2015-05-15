@@ -1,6 +1,8 @@
 package org.sanjeevenutan.marklogic.tradebrowser.security;
 
 import org.junit.Test;
+import org.sanjeevenutan.marklogic.tradebrowser.security.AuthoritiesConstants;
+import org.sanjeevenutan.marklogic.tradebrowser.security.SecurityUtils;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

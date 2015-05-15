@@ -1,15 +1,16 @@
 package org.sanjeevenutan.marklogic.tradebrowser.service;
 
+import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.sanjeevenutan.marklogic.tradebrowser.Application;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.PersistentToken;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.User;
 import org.sanjeevenutan.marklogic.tradebrowser.repository.PersistentTokenRepository;
 import org.sanjeevenutan.marklogic.tradebrowser.repository.UserRepository;
-import org.joda.time.DateTime;
+import org.sanjeevenutan.marklogic.tradebrowser.service.UserService;
 import org.sanjeevenutan.marklogic.tradebrowser.service.util.RandomUtil;
-import org.joda.time.LocalDate;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,6 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import javax.inject.Inject;
+
 import java.util.Optional;
 import java.util.List;
 

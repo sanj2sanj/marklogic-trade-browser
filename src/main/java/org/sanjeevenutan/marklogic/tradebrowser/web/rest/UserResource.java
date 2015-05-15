@@ -1,6 +1,7 @@
 package org.sanjeevenutan.marklogic.tradebrowser.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+
 import org.sanjeevenutan.marklogic.tradebrowser.domain.User;
 import org.sanjeevenutan.marklogic.tradebrowser.repository.UserRepository;
 import org.sanjeevenutan.marklogic.tradebrowser.repository.search.UserSearchRepository;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.inject.Inject;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;

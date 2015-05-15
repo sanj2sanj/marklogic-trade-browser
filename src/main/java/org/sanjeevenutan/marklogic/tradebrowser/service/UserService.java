@@ -1,5 +1,7 @@
 package org.sanjeevenutan.marklogic.tradebrowser.service;
 
+import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.Authority;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.PersistentToken;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.User;
@@ -9,8 +11,6 @@ import org.sanjeevenutan.marklogic.tradebrowser.repository.UserRepository;
 import org.sanjeevenutan.marklogic.tradebrowser.repository.search.UserSearchRepository;
 import org.sanjeevenutan.marklogic.tradebrowser.security.SecurityUtils;
 import org.sanjeevenutan.marklogic.tradebrowser.service.util.RandomUtil;
-import org.joda.time.DateTime;
-import org.joda.time.LocalDate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;

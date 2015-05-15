@@ -3,6 +3,7 @@ package org.sanjeevenutan.marklogic.tradebrowser.config;
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.servlet.InstrumentedFilter;
 import com.codahale.metrics.servlets.MetricsServlet;
+
 import org.sanjeevenutan.marklogic.tradebrowser.web.filter.CachingHttpHeadersFilter;
 import org.sanjeevenutan.marklogic.tradebrowser.web.filter.StaticResourcesProductionFilter;
 import org.sanjeevenutan.marklogic.tradebrowser.web.filter.gzip.GZipServletFilter;
@@ -19,6 +20,7 @@ import org.springframework.core.env.Environment;
 
 import javax.inject.Inject;
 import javax.servlet.*;
+
 import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.HashMap;

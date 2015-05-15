@@ -1,7 +1,6 @@
 package org.sanjeevenutan.marklogic.tradebrowser.repository.ml;
 
 import org.sanjeevenutan.marklogic.tradebrowser.domain.Trade;
-import org.sanjeevenutan.marklogic.tradebrowser.repository.TradeRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

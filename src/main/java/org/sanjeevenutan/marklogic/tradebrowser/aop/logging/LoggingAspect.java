@@ -1,17 +1,18 @@
 package org.sanjeevenutan.marklogic.tradebrowser.aop.logging;
 
-import org.sanjeevenutan.marklogic.tradebrowser.config.Constants;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.sanjeevenutan.marklogic.tradebrowser.config.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.env.Environment;
 
 import javax.inject.Inject;
+
 import java.util.Arrays;
 
 /**
@@ -25,7 +26,7 @@ public class LoggingAspect {
     @Inject
     private Environment env;
 
-    @Pointcut("within(org.sanjeevenutan.marklogic.tradebrowser.repository..*) || within(org.sanjeevenutan.marklogic.tradebrowser.service..*) || within(org.sanjeevenutan.marklogic.tradebrowser.web.rest..*)")
+    @Pointcut("within(org.sn.marklogic.tradebrowser.repository..*) || within(org.sn.marklogic.tradebrowser.service..*) || within(org.sn.marklogic.tradebrowser.web.rest..*)")
     public void loggingPointcut() {}
 
     @AfterThrowing(pointcut = "loggingPointcut()", throwing = "e")

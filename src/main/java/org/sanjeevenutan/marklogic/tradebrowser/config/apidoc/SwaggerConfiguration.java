@@ -1,10 +1,11 @@
 package org.sanjeevenutan.marklogic.tradebrowser.config.apidoc;
 
-import org.sanjeevenutan.marklogic.tradebrowser.config.Constants;
 import com.mangofactory.swagger.configuration.SpringSwaggerConfig;
 import com.mangofactory.swagger.models.dto.ApiInfo;
 import com.mangofactory.swagger.plugin.EnableSwagger;
 import com.mangofactory.swagger.plugin.SwaggerSpringMvcPlugin;
+
+import org.sanjeevenutan.marklogic.tradebrowser.config.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.bind.RelaxedPropertyResolver;

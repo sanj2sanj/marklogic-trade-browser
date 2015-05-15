@@ -10,10 +10,12 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.SimpleCommandLinePropertySource;
+
 import com.google.common.base.Joiner;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;

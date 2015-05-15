@@ -1,9 +1,9 @@
 package org.sanjeevenutan.marklogic.tradebrowser.web.websocket;
 
-import org.sanjeevenutan.marklogic.tradebrowser.security.SecurityUtils;
-import org.sanjeevenutan.marklogic.tradebrowser.web.websocket.dto.ActivityDTO;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
+import org.sanjeevenutan.marklogic.tradebrowser.security.SecurityUtils;
+import org.sanjeevenutan.marklogic.tradebrowser.web.websocket.dto.ActivityDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationListener;
@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
 import javax.inject.Inject;
+
 import java.security.Principal;
 import java.util.Calendar;
 

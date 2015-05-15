@@ -26,10 +26,10 @@ import javax.sql.DataSource;
 import java.util.Arrays;
 
 @Configuration
-@EnableJpaRepositories("org.sanjeevenutan.marklogic.tradebrowser.repository")
+@EnableJpaRepositories("org.sanjeevnutan.marklogic.tradebrowser.repository")
 @EnableJpaAuditing(auditorAwareRef = "springSecurityAuditorAware")
 @EnableTransactionManagement
-@EnableElasticsearchRepositories("org.sanjeevenutan.marklogic.tradebrowser.repository.search")
+@EnableElasticsearchRepositories("org.sanjeevnutan.marklogic.tradebrowser.repository.search")
 public class DatabaseConfiguration implements EnvironmentAware {
 
     private final Logger log = LoggerFactory.getLogger(DatabaseConfiguration.class);
@@ -48,7 +48,7 @@ public class DatabaseConfiguration implements EnvironmentAware {
     }
 
     @Bean(destroyMethod = "shutdown")
-    @ConditionalOnMissingClass(name = "org.sanjeevenutan.marklogic.tradebrowser.config.HerokuDatabaseConfiguration")
+    @ConditionalOnMissingClass(name = "org.sanjeevnutan.marklogic.tradebrowser.config.HerokuDatabaseConfiguration")
     @Profile("!" + Constants.SPRING_PROFILE_CLOUD)
     public DataSource dataSource() {
         log.debug("Configuring Datasource");

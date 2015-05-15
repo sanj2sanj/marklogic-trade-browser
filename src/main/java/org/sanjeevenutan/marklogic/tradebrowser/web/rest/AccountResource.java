@@ -1,6 +1,8 @@
 package org.sanjeevenutan.marklogic.tradebrowser.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+
+import org.apache.commons.lang.StringUtils;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.Authority;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.PersistentToken;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.User;
@@ -10,7 +12,6 @@ import org.sanjeevenutan.marklogic.tradebrowser.security.SecurityUtils;
 import org.sanjeevenutan.marklogic.tradebrowser.service.MailService;
 import org.sanjeevenutan.marklogic.tradebrowser.service.UserService;
 import org.sanjeevenutan.marklogic.tradebrowser.web.rest.dto.UserDTO;
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.*;

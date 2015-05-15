@@ -1,10 +1,10 @@
 package org.sanjeevenutan.marklogic.tradebrowser.security;
 
+import org.joda.time.LocalDate;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.PersistentToken;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.User;
 import org.sanjeevenutan.marklogic.tradebrowser.repository.PersistentTokenRepository;
 import org.sanjeevenutan.marklogic.tradebrowser.repository.UserRepository;
-import org.joda.time.LocalDate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.env.Environment;
@@ -23,6 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.security.SecureRandom;
 import java.util.Arrays;
 

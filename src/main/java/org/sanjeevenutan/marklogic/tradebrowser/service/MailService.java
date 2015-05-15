@@ -1,7 +1,7 @@
 package org.sanjeevenutan.marklogic.tradebrowser.service;
 
-import org.sanjeevenutan.marklogic.tradebrowser.domain.User;
 import org.apache.commons.lang.CharEncoding;
+import org.sanjeevenutan.marklogic.tradebrowser.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
@@ -16,6 +16,7 @@ import org.thymeleaf.spring4.SpringTemplateEngine;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.mail.internet.MimeMessage;
+
 import java.util.Locale;
 
 /**

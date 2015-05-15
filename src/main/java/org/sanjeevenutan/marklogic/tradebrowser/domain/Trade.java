@@ -3,11 +3,11 @@ package org.sanjeevenutan.marklogic.tradebrowser.domain;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
+import org.hibernate.annotations.Type;
+import org.joda.time.LocalDate;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.util.CustomLocalDateSerializer;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.util.ISO8601LocalDateDeserializer;
 import org.sanjeevenutan.marklogic.tradebrowser.repository.ml.Identifiable;
-import org.hibernate.annotations.Type;
-import org.joda.time.LocalDate;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import javax.persistence.*;

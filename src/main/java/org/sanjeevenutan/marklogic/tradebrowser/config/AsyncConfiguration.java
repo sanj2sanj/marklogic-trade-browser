@@ -1,5 +1,6 @@
 package org.sanjeevenutan.marklogic.tradebrowser.config;
 
+import org.sanjeevenutan.marklogic.tradebrowser.async.ExceptionHandlingAsyncTaskExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
@@ -16,8 +17,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.Executor;
-
-import org.sanjeevenutan.marklogic.tradebrowser.async.ExceptionHandlingAsyncTaskExecutor;
 
 @Configuration
 @EnableAsync

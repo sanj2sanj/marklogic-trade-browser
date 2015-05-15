@@ -1,5 +1,10 @@
 package org.sanjeevenutan.marklogic.tradebrowser.web.rest;
 
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.sanjeevenutan.marklogic.tradebrowser.Application;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.Authority;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.User;
@@ -8,12 +13,8 @@ import org.sanjeevenutan.marklogic.tradebrowser.repository.UserRepository;
 import org.sanjeevenutan.marklogic.tradebrowser.security.AuthoritiesConstants;
 import org.sanjeevenutan.marklogic.tradebrowser.service.MailService;
 import org.sanjeevenutan.marklogic.tradebrowser.service.UserService;
+import org.sanjeevenutan.marklogic.tradebrowser.web.rest.AccountResource;
 import org.sanjeevenutan.marklogic.tradebrowser.web.rest.dto.UserDTO;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.http.MediaType;
@@ -25,6 +26,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Optional;
