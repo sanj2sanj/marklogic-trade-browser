@@ -13,8 +13,6 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-import com.marklogic.client.query.QueryManager;
-
 @Component
 public class ApplicationStartup implements
 		ApplicationListener<ContextRefreshedEvent> {

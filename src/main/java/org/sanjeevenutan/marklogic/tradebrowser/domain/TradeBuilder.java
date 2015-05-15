@@ -8,6 +8,7 @@
 package org.sanjeevenutan.marklogic.tradebrowser.domain;
 
 import java.math.BigDecimal;
+
 import org.joda.time.LocalDate;
 
 public class TradeBuilder extends TradeBuilderBase<TradeBuilder> {
