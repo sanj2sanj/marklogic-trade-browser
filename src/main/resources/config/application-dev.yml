@@ -10,7 +10,11 @@ spring:
         databaseName: 
         serverName: 
         username: 
-        password: 
+        password:
+        ml-username: admin
+        ml-password: admin
+        ml-hostname: localhost
+        ml-port: 8004         
 
     jpa:
         database-platform: org.hibernate.dialect.H2Dialect

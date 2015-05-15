@@ -2,9 +2,17 @@ package org.sanjeevenutan.marklogic.tradebrowser.config;
 
 import com.codahale.metrics.MetricRegistry;
 import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
+import com.marklogic.client.DatabaseClient;
+import com.marklogic.client.DatabaseClientFactory;
+import com.marklogic.client.DatabaseClientFactory.Authentication;
+import com.marklogic.client.pojo.PojoRepository;
+import com.marklogic.client.query.QueryManager;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+
 import liquibase.integration.spring.SpringLiquibase;
+
+import org.sanjeevenutan.marklogic.tradebrowser.domain.Trade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,13 +31,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.util.StringUtils;
 
 import javax.sql.DataSource;
+
 import java.util.Arrays;
 
 @Configuration
-@EnableJpaRepositories("org.sanjeevnutan.marklogic.tradebrowser.repository")
+@EnableJpaRepositories("org.sanjeevenutan.marklogic.tradebrowser.repository")
 @EnableJpaAuditing(auditorAwareRef = "springSecurityAuditorAware")
 @EnableTransactionManagement
-@EnableElasticsearchRepositories("org.sanjeevnutan.marklogic.tradebrowser.repository.search")
+@EnableElasticsearchRepositories("org.sanjeevenutan.marklogic.tradebrowser.repository.search")
 public class DatabaseConfiguration implements EnvironmentAware {
 
     private final Logger log = LoggerFactory.getLogger(DatabaseConfiguration.class);
@@ -48,7 +57,7 @@ public class DatabaseConfiguration implements EnvironmentAware {
     }
 
     @Bean(destroyMethod = "shutdown")
-    @ConditionalOnMissingClass(name = "org.sanjeevnutan.marklogic.tradebrowser.config.HerokuDatabaseConfiguration")
+    @ConditionalOnMissingClass(name = "org.sanjeevenutan.marklogic.tradebrowser.config.HerokuDatabaseConfiguration")
     @Profile("!" + Constants.SPRING_PROFILE_CLOUD)
     public DataSource dataSource() {
         log.debug("Configuring Datasource");
@@ -107,4 +116,23 @@ public class DatabaseConfiguration implements EnvironmentAware {
     public Hibernate4Module hibernate4Module() {
         return new Hibernate4Module();
     }
+    
+    
+    @Bean 
+	public QueryManager qm()
+	{
+		return client().newQueryManager();
+	}
+	
+	@Bean
+	public DatabaseClient client()
+	{
+		return DatabaseClientFactory.newClient(propertyResolver.getProperty("ml-hostname"), Integer.valueOf(propertyResolver.getProperty("ml-port")), propertyResolver.getProperty("ml-username"),propertyResolver.getProperty("ml-password"), Authentication.DIGEST);
+	}
+	
+	@Bean
+    public PojoRepository<Trade, Long> tradeRepo() {		
+		return client().newPojoRepository(Trade.class, Long.class);
+    }
+
 }
