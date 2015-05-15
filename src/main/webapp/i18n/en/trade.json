@@ -1,0 +1,23 @@
+{
+    "tradebrowserApp": {
+        "trade" : {
+            "home": {
+                "title": "Trades",
+                "createLabel": "Create a new Trade",
+                "createOrEditLabel": "Create or edit a Trade"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Trade {{ id }}?"
+            },
+            "detail": {
+                "title": "Trade"
+            },
+            "stock": "Stock",
+            "tradeDate": "TradeDate",
+            "settlementDate": "SettlementDate",
+            "amount": "Amount",
+            "currency": "Currency",
+            "counterparty": "Counterparty"
+        }
+    }
+}

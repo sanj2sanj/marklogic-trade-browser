@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity Trade.
+    -->
+    <changeSet id="20150515131832" author="jhipster">
+        <createTable tableName="TRADE">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="stock" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="trade_date" type="date">
+                <constraints nullable="false" />
+            </column>
+            <column name="settlement_date" type="date">
+                <constraints nullable="false" />
+            </column>
+            <column name="amount" type="decimal(10,2)">
+                <constraints nullable="false" />
+            </column>
+            <column name="currency" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="counterparty" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+        
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,87 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "stock",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Stock",
+            "fieldNameUnderscored": "stock",
+            "fieldInJavaBeanMethod": "Stock",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "tradeDate",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "TradeDate",
+            "fieldNameUnderscored": "trade_date",
+            "fieldInJavaBeanMethod": "TradeDate",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "settlementDate",
+            "fieldType": "LocalDate",
+            "fieldNameCapitalized": "SettlementDate",
+            "fieldNameUnderscored": "settlement_date",
+            "fieldInJavaBeanMethod": "SettlementDate",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "amount",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "Amount",
+            "fieldNameUnderscored": "amount",
+            "fieldInJavaBeanMethod": "Amount",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "currency",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Currency",
+            "fieldNameUnderscored": "currency",
+            "fieldInJavaBeanMethod": "Currency",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+	{
+            "fieldId": 6,
+            "fieldName": "counterparty",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Counterparty",
+            "fieldNameUnderscored": "counterparty",
+            "fieldInJavaBeanMethod": "Counterparty",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": true,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": true,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150515131832",
+    "pagination": "infinite-scroll",
+    "validation": true
+}

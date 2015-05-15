@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="tradebrowserApp.trade.detail.title">Trade</span> {{trade.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="tradebrowserApp.trade.stock">Stock</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{trade.stock}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="tradebrowserApp.trade.tradeDate">TradeDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{trade.tradeDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="tradebrowserApp.trade.settlementDate">SettlementDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{trade.settlementDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="tradebrowserApp.trade.amount">Amount</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{trade.amount}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="tradebrowserApp.trade.currency">Currency</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{trade.currency}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="tradebrowserApp.trade.counterparty">Counterparty</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{trade.counterparty}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="trade"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,20 @@
+{
+  "generator-jhipster": {
+    "baseName": "tradebrowser",
+    "packageName": "org.sanjeevenutan.marklogic.tradebrowser",
+    "packageFolder": "org/sanjeevenutan/marklogic/tradebrowser",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "rememberMeKey": "4bc88064bfe7d8edc0fc01571b1225f396c90314"
+  }
+}
