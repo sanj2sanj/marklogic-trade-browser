@@ -8,7 +8,7 @@ Pre Requisites:
 * Java 8
 * Maven installed
 * Marklogic installed and a RESTful endpoint at localhost:8004.
-* Marklogic user called "admin" setup with password Admin
+* Marklogic user called "admin" setup with password admin
 
 Running
 --------------
