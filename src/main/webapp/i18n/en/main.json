@@ -5,7 +5,7 @@
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
-        "question": "",
+        "question": "Please make sure Marklogic is running and there is RESTful endpoint at localhost:8004, username=admin, password=admin. If you need to change these please edit /src/main/resources/config/application-dev.yml",
         "link": {
             "homepage": "",
             "stackoverflow": "",
