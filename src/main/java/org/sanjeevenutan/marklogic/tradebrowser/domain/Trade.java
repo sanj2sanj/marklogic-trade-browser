@@ -2,14 +2,17 @@ package org.sanjeevenutan.marklogic.tradebrowser.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import org.sanjeevenutan.marklogic.tradebrowser.domain.util.CustomLocalDateSerializer;
 import org.sanjeevenutan.marklogic.tradebrowser.domain.util.ISO8601LocalDateDeserializer;
+import org.sanjeevenutan.marklogic.tradebrowser.repository.ml.Identifiable;
 import org.hibernate.annotations.Type;
 import org.joda.time.LocalDate;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -20,7 +23,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "TRADE")
 @Document(indexName="trade")
-public class Trade implements Serializable {
+public class Trade implements Serializable,Identifiable {
 
     @Id    
     @GeneratedValue(strategy = GenerationType.AUTO)

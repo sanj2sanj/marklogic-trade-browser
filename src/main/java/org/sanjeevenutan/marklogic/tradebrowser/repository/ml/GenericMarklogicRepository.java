@@ -16,7 +16,6 @@ import com.marklogic.client.pojo.PojoRepository;
 import com.marklogic.client.query.QueryManager;
 import com.marklogic.client.query.StringQueryDefinition;
 
-@Repository
 public abstract class GenericMarklogicRepository<T extends Identifiable> {
 
 	@Inject

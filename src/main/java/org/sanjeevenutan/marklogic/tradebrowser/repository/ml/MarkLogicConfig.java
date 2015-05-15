@@ -13,8 +13,7 @@ import com.marklogic.client.query.QueryManager;
 
 @Configuration
 public class MarkLogicConfig {
-	
-	
+		
 	@Bean 
 	public QueryManager qm()
 	{
@@ -30,7 +29,6 @@ public class MarkLogicConfig {
 	@Bean
     public PojoRepository<Trade, Long> tradeRepo() {		
 		return client().newPojoRepository(Trade.class, Long.class);
-    }
-		
+    }	
 	
 }
