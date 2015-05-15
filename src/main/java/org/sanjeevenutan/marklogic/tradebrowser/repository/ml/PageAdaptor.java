@@ -13,12 +13,11 @@ import com.marklogic.client.pojo.PojoPage;
 public class PageAdaptor<T> implements Page<T> {
 
 	public PojoPage<T> pojoPage;
-	
-	public PageAdaptor(PojoPage<T> p)
-	{
-		this.pojoPage=p;
+
+	public PageAdaptor(PojoPage<T> p) {
+		this.pojoPage = p;
 	}
-	
+
 	@Override
 	public int getNumber() {
 		return (int) pojoPage.getPageNumber();
@@ -50,7 +49,7 @@ public class PageAdaptor<T> implements Page<T> {
 	}
 
 	@Override
-	public boolean isFirst() {		
+	public boolean isFirst() {
 		return pojoPage.isFirstPage();
 	}
 
@@ -85,7 +84,6 @@ public class PageAdaptor<T> implements Page<T> {
 		return pojoPage.iterator();
 	}
 
-
 	@Override
 	public long getTotalElements() {
 		return pojoPage.getTotalSize();
@@ -94,7 +92,6 @@ public class PageAdaptor<T> implements Page<T> {
 	public void close() {
 		pojoPage.close();
 	}
-
 
 	public T next() {
 		return pojoPage.next();

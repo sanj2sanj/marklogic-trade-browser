@@ -1,5 +1,10 @@
 package org.sanjeevenutan.marklogic.tradebrowser.web.rest;
 
+import java.util.List;
+
+import javax.annotation.security.RolesAllowed;
+import javax.inject.Inject;
+
 import org.joda.time.LocalDateTime;
 import org.sanjeevenutan.marklogic.tradebrowser.security.AuthoritiesConstants;
 import org.sanjeevenutan.marklogic.tradebrowser.service.AuditEventService;
@@ -7,12 +12,11 @@ import org.sanjeevenutan.marklogic.tradebrowser.web.propertyeditors.LocaleDateTi
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.*;
-
-import javax.annotation.security.RolesAllowed;
-import javax.inject.Inject;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * REST controller for getting the audit events.
@@ -21,28 +25,26 @@ import java.util.List;
 @RequestMapping("/api")
 public class AuditResource {
 
-    @Inject
-    private AuditEventService auditEventService;
+	@Inject
+	private AuditEventService auditEventService;
 
-    @InitBinder
-    public void initBinder(WebDataBinder binder) {
-        binder.registerCustomEditor(LocalDateTime.class, new LocaleDateTimeEditor("yyyy-MM-dd", false));
-    }
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+		binder.registerCustomEditor(LocalDateTime.class,
+				new LocaleDateTimeEditor("yyyy-MM-dd", false));
+	}
 
-    @RequestMapping(value = "/audits/all",
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    @RolesAllowed(AuthoritiesConstants.ADMIN)
-    public List<AuditEvent> findAll() {
-        return auditEventService.findAll();
-    }
+	@RequestMapping(value = "/audits/all", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RolesAllowed(AuthoritiesConstants.ADMIN)
+	public List<AuditEvent> findAll() {
+		return auditEventService.findAll();
+	}
 
-    @RequestMapping(value = "/audits/byDates",
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    @RolesAllowed(AuthoritiesConstants.ADMIN)
-    public List<AuditEvent> findByDates(@RequestParam(value = "fromDate") LocalDateTime fromDate,
-                                    @RequestParam(value = "toDate") LocalDateTime toDate) {
-        return auditEventService.findByDates(fromDate, toDate);
-    }
+	@RequestMapping(value = "/audits/byDates", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RolesAllowed(AuthoritiesConstants.ADMIN)
+	public List<AuditEvent> findByDates(
+			@RequestParam(value = "fromDate") LocalDateTime fromDate,
+			@RequestParam(value = "toDate") LocalDateTime toDate) {
+		return auditEventService.findByDates(fromDate, toDate);
+	}
 }

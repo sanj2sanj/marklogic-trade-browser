@@ -16,14 +16,14 @@ import com.fasterxml.jackson.databind.SerializerProvider;
  */
 public class CustomDateTimeSerializer extends JsonSerializer<DateTime> {
 
-    private static DateTimeFormatter formatter = DateTimeFormat
-            .forPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
+	private static DateTimeFormatter formatter = DateTimeFormat
+			.forPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
 
-    @Override
-    public void serialize(DateTime value, JsonGenerator generator,
-                          SerializerProvider serializerProvider)
-            throws IOException {
-        generator.writeString(formatter.print(value.toDateTime(DateTimeZone.UTC)));
-    }
+	@Override
+	public void serialize(DateTime value, JsonGenerator generator,
+			SerializerProvider serializerProvider) throws IOException {
+		generator.writeString(formatter.print(value
+				.toDateTime(DateTimeZone.UTC)));
+	}
 
 }
