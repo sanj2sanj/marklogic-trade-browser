@@ -38,7 +38,7 @@ public abstract class GenericMarklogicRepository<T extends Identifiable> {
 	}
 
 	public T findOne(Long id) {
-		return repo.readAll(id).next();
+		return repo.read(id);
 	}
 
 	public List<T> search(String queryString) {
