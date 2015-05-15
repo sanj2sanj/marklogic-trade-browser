@@ -1,18 +1,18 @@
 {
     "main": {
-        "title": "Welcome, Java Hipster!",
-        "subtitle": "This is your homepage",
+        "title": "Welcome!",
+        "subtitle": "This is a demo app using AngularJS, Spring Boot and Marklogic",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
-        "question": "If you have any question on JHipster:",
+        "question": "",
         "link": {
-            "homepage": "JHipster homepage",
-            "stackoverflow": "JHipster on Stack Overflow",
-            "bugtracker": "JHipster bug tracker",
-            "contact": "contact @java_hipster on Twitter"
+            "homepage": "",
+            "stackoverflow": "",
+            "bugtracker": "",
+            "contact": ""
         },
-        "like": "If you like JHipster, don't forget to give us a star on",
-        "github": "Github"
+        "like": "",
+        "github": ""
     }
 }
